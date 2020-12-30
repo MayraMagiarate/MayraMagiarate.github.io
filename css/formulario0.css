@@ -5,7 +5,7 @@ body{
   font-family: 'Roboto', sans-serif;
 /*  background-image: url(../img/imgRegistro.jpg);*/
 background-image: url(../img/imgRegistro.jpg);
-  background-size: cover;
+background-size: cover;
 
 }
 
@@ -180,6 +180,13 @@ text-shadow: 1px 1px 1px red;
     display:flex;
     flex-direction: column;
     justify-content: center;
+  }
+  body{
+    font-family: 'Roboto', sans-serif;
+  /*  background-image: url(../img/imgRegistro.jpg);*/
+  background-image: url(../img/imgRegistro.jpg);
+  background-size: cover;
+
   }
 
 }
