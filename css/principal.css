@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  max-width: 1904px;
+  /*Establezco que el ancho maximo serà 1904px*/
+  min-width: 240px;
+  /*Establezco que el ancho minimo para mobile serà de 240px*/
+
+  min-height: 1000px;
+  max-height: 1920px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/fondoNegro.jpg);
+
+  /*Propiedades flex*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header {
+
+  width: 100%;  /*Tendra un ancho igual al 100% respecto a su padre (el contenedor)*/
+  min-height: 150px;
+  margin: 0;
+  padding: 0;
+  /*Propiedades flex*/
+  display: flex;  /*al ser el header padre deberà tener un comportamiento flexible*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+header .logo{
+  margin-top: 10px;
+  padding: 0;
+  width: 30%;
+  /**Propiedades flex*/
+  display: flex;
+  justify-content:center;
+  flex-direction: row;
+  align-items: center;
+
+
+}
+header .logo img{
+  width: 70px;
+  height: 70px;
+  margin:0;
+  justify-content:center;
+  align-items:center;
+
+}
+
+ .titulo{
+   width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight:bold;
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+}
+header nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+
+
+
+}
+header nav a{
+  border: 2px solid white;
+  border-style: solid;
+  border-radius: 20px;
+  margin: 20px;
+  min-width: 100px;
+  height: 50px;
+  flex:1; /*que ocupe todo el lugar dle padre*/
+  text-align: center;
+  align-self: center;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  color:white;
+}
+main{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  flex-wrap: wrap;
+  margin:0;
+  padding:0;
+}
+main .sec1{
+  width: 100%;
+  height: 100%;
+
+  display:flex;
+  flex-wrap: wrap;
+
+
+
+}
+main .sec1 .imagen{
+  width: 100%;
+  height: 100%;
+    border:3px solid black;
+  display: flex;
+
+
+
+
+}
+main .sec1 .imagen img{
+  width: 100%;
+  object-fit: cover;
+  flex:1
+
+}
+footer{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin:0;
+  padding: 0;
+}
+footer nav{
+  margin: 0;
+  padding: 0;
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+footer nav a{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color:white;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  border-style: solid;
+  border-radius: 20px;
+
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  margin:10px;
+  text-shadow: black;
+  font-size: 20px;
+  padding: 2px;
+  flex:1;
+}
+footer nav img{
+  width: 75px;
+  height: 60px;
+  object-fit: contain;
+}
+@media (min-width: 650px) { /*de 800px de ancho para arriba*/
+
+  header .logo{
+    justify-content:center;
+  margin:0;
+  padding: 0;
+    width: 20%;
+  }
+  header .logo img{
+    width: 90px;
+    height: 90px;
+    margin:0;
+    justify-content:center;
+    align-items:center;
+
+  }
+  header .titulo{
+    justify-content: flex-start;
+    width: 30%;
+  }
+  header nav{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+  }
+  header nav a{
+    font-size: 25px;
+  }
+  footer{
+    height: 120px;
+  }
+  footer nav{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+  footer nav a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 20px;
+
+    width: 110px;
+    height: 50px;
+    line-height: 40px;
+    margin:50px;
+    text-shadow: black;
+    font-size: 27px;
+    padding: 0px;
+
+  }
+  footer nav img{
+    width: 75px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+}

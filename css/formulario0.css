@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+/*  background-image: url(../img/imgRegistro.jpg);*/
+background-image: url(../img/imgRegistro.jpg);
+  background-size: cover;
+
+}
+
+.contenedor{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  min-width: 240px;
+  max-width: 1904px;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  height: 90px;
+  font-style: oblique;
+  text-align:center;
+  padding: 0;
+  margin: 0;
+
+}
+.logoRegistro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 95%;
+
+
+
+}
+.logoRegistro img{
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  margin: 0;
+}
+.enlace{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 80%;
+
+
+
+  }
+.enlace a{
+  color:white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+
+}
+main{
+  display: flex;
+  max-width: 800px; /*Primero movile*/
+  width: 90%;
+  margin:auto;
+  padding: 40px;
+}
+.formulario{
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;/*dos columnas, una a la izquierda y otra a la derecha*/
+  gap: 25px; /*Espaciado entre cada elemento del grid*/
+
+}
+.formulario p{
+  font-size: 12px;
+  font-family:cursive;
+
+}
+.formulario__label{
+  display: block; /*display tipo bloque para que abarque el 100% de la columna del grid o de su contenedor*/
+  font-weight: 700; /* */
+  color:CornSilk;
+  text-shadow: 1px 1px 1px black;
+  padding: 10px;
+
+  cursor:pointer; /*para que el cursor sea una manito*/
+}
+
+.formulario__grupo-input{
+  position: relative; /*Para que el grupo tenga un posicionamiento relativo*/
+}
+.formulario__input{
+  width: 100%;
+  background: white;
+  border: 3.5px solid transparent;
+  border-radius: 3px;
+  height: 46px;
+  line-height: 46px;/*esto es para que el texto quede centrado, puesto que la altura es de 46 px el line-height tambien*/
+  padding: 0 40px 0 10px;
+  transition:0.3s ease all; /*esto es para agregar un efecto de transicion al elemento, en este caso a todos los imputs*/
+}
+.formulario__input:focus{
+  border: 3px solid orange;
+  outline: none;
+  box-shadow: 3px 0px 30px grey;
+}
+.formulario__input-error{
+font-size: 12px;
+margin-bottom: 0;
+display:none; /*esto es para que no muestre los mensajes de error antes de que se produzcan*/
+}
+.formulario__input-error-activo{
+  display: block;
+}
+.formulario__validacion-estado{
+  position: absolute;
+  right:10px;
+  botom: 10px;
+  top:15px;
+  z-index:100; /*para que el icono este por arriba de otros elementos*/
+  font-size: 17px;
+  opacity: 0; /*la opacidad del icono sera sero asi no se ve, hasta que se produzca el error o el acierto*/
+}
+.formularios__checkbox{
+  margin-right: 15px;
+
+}
+ #grupo__terminos, .formulario__mensaje, .formulario__grupo-btn-enviar{
+  grid-column: span 2; /*Esto es para que los terminos y condiciones como el mensaje de error y el boton enviar se expandan a dos y ocupen la totalidad de la columna, quedando asi uno debajo del otro*/
+
+}
+.formulario__mensaje{
+  height: 50px;
+  line-height: 50px;
+  background: rgba(231, 76, 60 );
+  padding: 0 15px;
+  border-radius: 3px;
+  text-align: center;
+  display: none; /*no queremos que se muestre el mensaje hasta que se produzca el error*/
+
+}
+.formulario__mensaje-activo{/*Creamos una clase o modificador de la clase formulario__mensaje, en este caso cuando estè activo el mismo*/
+  display: block;
+}
+.formulario__mensaje p{
+  margin:0;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.formulario__grupo-btn-enviar{
+  display: flex;
+  flex-direction: column; /*para que los elementos del div se coloquen uno debajo del otro formando una columna*/
+  align-items: center;
+}
+.formulario__btn{
+  height: 50px;
+  background: black;
+  border-radius: 20px;
+  border: 1px solid white;
+  width: 32%;
+  font-weight: bold;
+  color: white;
+  line-height:50px;
+
+}
+.formulario__mensaje-exito{
+display: none; /*inactivo hasta que sea un exito la operacion*/
+color: white;
+text-shadow: 1px 1px 1px red;
+
+
+}
+@media ( max-width:700px) {/*de 700px o menos*/
+  .formulario{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

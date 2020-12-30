@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/formulario0.css">
+  <title>Registro de Usuario</title>
+</head>
+
+<body>
+
+  <div class="contenedor">
+    <header>
+    <div class="logoRegistro">
+      <img src="img/smart-house.png" alt="">
+    </div>
+    <div class="enlace">
+      <a href="finalPrincipal.html">Volver a Pagina Principal</a>
+    </div>
+    </header>
+
+    <main>
+      <form action="" class="formulario" id="formulario">
+        <!-- etiqueta de formulario, dentro de el deben ir todos los campos -->
+        <div class="formulario__grupo" id="grupo__usuario">          <!--contenedor de la primera casilla  -->
+          <label for="usuario" class="formulario__label">Usuario</label>
+          <div class="formulario__grupo-input">
+            <!---->
+            <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Nombre-de-usuario">
+            <!--el id del input debe conicidir con el for="" del label que controlarà -->
+            <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+          </div>
+          <p class="formulario__input-error">El usuario debe ser de 4 a 16 digitos y sólo puede contener letras, numeros y guion bajo!</p>
+        </div>
+          <div class="formulario__grupo" id="grupo__nombre">
+            <!--contenedor de la primera casilla  -->
+            <label for="nombre" class="formulario__label">Nombre</label>
+            <div class="formulario__grupo-input">
+              <!---->
+              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre-de-persona">
+              <!--el id del input debe conicidir con el for="" del label que controlarà -->
+              <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+            </div>
+            <p class="formulario__input-error">El Nombre no debe contener numeros, ni simbolos, sólo letras!</p>
+          </div>
+          <div class="formulario__grupo" id="grupo__password">
+            <!--contenedor de la primera casilla  -->
+            <label for="password" class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo-input">
+              <!---->
+              <input type="password" class="formulario__input" name="password" id="password">
+              <!--el id del input debe conicidir con el for="" del label que controlarà -->
+              <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+            </div>
+            <p class="formulario__input-error">La Contraseña debe ser de 4 a 12 digitos y sólo puede contener letras, numeros y guion bajo!</p>
+          </div>
+
+            <div class="formulario__grupo" id="grupo__password2">
+              <!--contenedor de la primera casilla  -->
+              <label for="password2" class="formulario__label">Repita la Contraseña</label>
+              <div class="formulario__grupo-input">
+                <!--Debemos definir en imput el type= password asi no muestra los caracteres que escribimos-->
+                <input type="password" class="formulario__input" name="password2" id="password2">
+                <!--el id del input debe conicidir con el for="" del label que controlarà -->
+                <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+              </div>
+              <p class="formulario__input-error">Las Contraseñas deben ser iguales!</p>
+            </div>
+              <div class="formulario__grupo" id="grupo__correo-electronico">
+                <!--contenedor de la primera casilla  -->
+                <label for="correo-electronico" class="formulario__label">Correo Electronico</label>
+                <div class="formulario__grupo-input">
+                  <!--Debemos definir en imput el type= password asi no muestra los caracteres que escribimos-->
+                  <input type="email" class="formulario__input" name="correo-electronico" id="correo-electronico" placeholder="correo@correo.com">
+                  <!--el id del input debe conicidir con el for="" del label que controlarà -->
+                  <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+                </div>
+                <p class="formulario__input-error">El correo solo puede tener letras, numeros, guion y guion bajo!</p>
+              </div>
+
+                <div class="formulario__grupo" id="grupo__telefono">
+                  <!--contenedor de la primera casilla  -->
+                  <label for="telefono" class="formulario__label">Telefono / Movil</label>
+                  <div class="formulario__grupo-input">
+                    <!--Debemos definir en imput el type= password asi no muestra los caracteres que escribimos-->
+                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="54 0261 123456789">
+                    <!--el id del input debe conicidir con el for="" del label que controlarà -->
+                    <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+                  </div>
+                  <p class="formulario__input-error">El Telefono sólo debe contener hasta 15 numeros, sin espacios ni guiones !</p>
+                </div>
+
+                  <div class="formulario__grupo" id="grupo__terminos">
+                    <label class="formulario__label">
+          <input class="formularios__checkbox"type="checkbox" name="terminos" id="terminos">
+          Acepto los Terminos y condiciones.
+        </label>
+                  </div>
+                  <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p> <b>Error!!</b> <i class="formulario__validacion-estado fas fa-exclamation-triangle">
+        </i>Por Favor Rellene el formulario Correctamente.</p>
+
+                  </div>
+                  <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <!-- en type de la etiqueta button colocamos submit para que envie o entregue los datos-->
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Los datos han sido cargados con Exito!!</p>
+                  </div>
+      </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/formulario0.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous">
+    </script>
+    <!--Debo colocar el script de la pagina de donde saque el icono que va dentro del input-->
+    </div>
+    <!--Fin contenedor-->
+</body>
+
+</html>

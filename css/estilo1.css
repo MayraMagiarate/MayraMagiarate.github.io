@@ -1,0 +1,184 @@
+*{/*INDICA PARA TODO EL SITIO*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.contenedor{/*Contenedor que hace de body flexible, esta clase contiene a todo el cuerpo del sitio*/
+  background: url(../img/FondoCeleste.jpg);
+  background-size: cover;
+  width: 100%; /*El contenedor tendrà un ancho igual al 90% del tamaño total del sitio*/
+  max-width: 1000px; /*el contenedor tendrà un tamaño maximo de 1000px*/
+  min-width: 240px;
+  margin: auto;/*Esto crea una distancia automatica y centrada entre los elementos que estan dentro del contenedor*/
+  /*Propiedades Flex*/
+  display: flex; /*Indicamos que el contenedor tendra un comportamiento flexible*/
+  flex-direction: row; /*Indicamos que los elementos dentro del contenedor tendran una direccion en forma de fila*/
+  flex-wrap: wrap; /*Indicamos que  el contenedor reubicara a sus elementos si estos no caben en ancho asignado*/
+
+}
+body{/*Este es el cuerpo de todo el sitio, contiene al div que hace de contenedor general*/
+  background: DarkGrey;
+
+}
+header{/*es elemento hijo del contenedor y a la vez es el elemento padre del logo y del menu de navegacion*/
+
+  width: 100%; /*Indicamos que tendra un ancho igual al 100% del ancho de su elemento padre, o sea el contenedor*/
+  padding:10px; /*Indicamos que la distancia entre su borde y su contenido es de 10 pixeles*/
+  /*Propiedades Flex*/
+display: flex; /*Como va a ser o es un elemento padre indicamos que tendrà un comportamiento flexible */
+justify-content: space-between;/*Indicamos que justifique o que aliñe de manera horizontal con espacio entre sus elementos*/
+align-items: center; /*Indicamos que aliñe verticalmente a sus elementos de manera centrada*/
+flex-flow: row wrap; /*indico que la direccion de los elementos sera en fila y se autoacomodaran si no entran en una misma y se pongan debajo de los otros que si*/
+}
+header .logo{/*este es el div que llamamos logo, o sea el div que esta dentro del header o sea la clase logo*/
+  color:white;/*el fondo de la clase logo serà de color blanco*/
+  font-size: 15px; /*De haber texto en este div, su tamaño de fuente serà de 15px*/
+/*  width:30%; /*la clase logo tendra un 30 porciento del ancho de su padre (el header)*/
+
+
+
+}
+header .logo img{/*la Imegen o el elemento de tipo imagen que esta dentro de la clase logo del header*/
+  width: 70px; /*redimensionamos nuestra imagen a 50px para adaptarla como nos convenga*/
+  vertical-align: top; /*como es un unico elemento alineamos verticalmente a la imagen pegada */
+}
+header .logo a{/*Este es el elemnto <a> que se encuentra dentro del div o clase "logo"*/
+  color: Turquoise; /*tendra un color cyan*/
+  margin: 10px;
+
+  text-decoration: none; /*el texto que este en esta etiqueta no llevara decoracion, basicamente es sacarle el subrayado*/
+  line-height: 70px; /*esto es para ajustar la altura de linea del texto a 50px, que es lo que mide nuestra imagen, ya que queremos que se aliñe centradamente con ella*/
+}
+header nav{/*este es el elemento nav que se encuentra dentro del header*/
+  width: 70%; /*Tendra un 70 porciento del ancho de su padre (el header)*/
+
+  /*Propiedades Flex*/
+  display: flex; /*como el elemento nav contiene otros elementos, colocamos la propiedad que lo hace un elemento flexible*/
+  flex-wrap: wrap; /*los elementos que esten dentro del nav se acomodaran automanticamente para entrar en el */
+  align-items: center;/*Los elementos dentro del nav se alinearan verticalmente de manera centrada*/
+}
+header nav a{/*elementos <a> dentro del nav que esta en el header*/
+
+  border: 2px solid Cyan;
+  color:Cyan;
+  margin:10px;/*el elemento tendra una distancia entre otros de 10px*/
+  padding:5px;/*el elemento tendra un espacion entre su borde y su contenido de 5px*/
+  text-align: center;
+  text-decoration: none; /*Para que el texto no tenga subrayado*/
+  /*Propiedades Flex, como el elemento a esta dentro de un padre flexible podemos agregarle propiedades de elementos flexibles*/
+ flex-grow: 1; /*Queremos que los elementos <a> abarquen todo el tamaño del padre (nav), o sea que tengan un crecimiento flexible igual a 1, esto es el tamaño total del padre*/
+}
+/* Vamos a trabajar el main, como el main es un section que comparte la pantalla con un aside tenemos dos opciones
+ 1º Darle a cada parte una proporcion porcentual del ancho del contenedor, digamos un 70% para el section llamado main y el 30% restante para el aside.
+ (esto seria colocando en .main la propiedad flex: 1 1 70%; siendo 1 la proporcion de agrandamiento , 1 la proporcion de disminucion y 70% el tamaño flexible respecto al padre.
+ tambien debemos colocar en el "contenedor" aside)
+ 2º Darle al aside un tamaño fijo, en caso de que queramos poner en el imagenes para que estas no se deformen.
+ (para esto indicamos que la clase main sea la de tamaño flexible y que el aside tenga siempre un tamaño fijo, lo hacemos colocando la propiedad
+ flex: 1; en la clase main, lo que indica que tendrà un crecimiento proporcional a 1 respecto de su padre; y colocando en el aside la propiedad flex: 0 0 200px; indicando con esto crecimiento 0, disminucin 0 y tamaño de 200px ) */
+.main{/*esta es la seccion que llamamos main, o sea es el elemento section de clase "main*/
+
+  padding:0; /*distancia del contenido de la clase main, al borde de la misma*/
+
+  margin:0;
+
+  /*Propiedades Flex*/
+  display: flex; /*la clase main tiene hijos, los cuales son los articulos, por ello deberia tener un comportamiento flexible*/
+  flex: 1; /*la clase main crecera en proporcion 1, disminuirà en proporcion 1 y tendrà o ocupara un 70% respecto del ancho de su padre, en este caso el contenedor principal*/
+}
+.main img{
+width: 100%;
+object-fit:cover;
+flex:1;
+}
+
+
+aside{/*Este es el aside que esta junto con el elemento section o clase "main"*/
+
+  padding: 5px; /*el contenido del aside se separarà de su borde en 5 pixeles*/
+  /*Propiedades flex*/
+  display: flex; /*El aside contiene elementos que necesitamos se ajusten automaticamente, entonces deberá tener un comportamiento flexible*/
+  flex: 0 0  200px;  /*Indicamos que tendra frente a su padre un agrandamiento proporcinal a 0, un achicamiento proporcional a 0, y que ocuparà unos 200px respecto al  ancho del padre*/
+  flex-wrap: wrap; /*Indicamos que los elementos contenidos dentro del aside se acomoden de manera automatica al tamaño de este*/
+  justify-content: flex-start; /*el contenido del elemento aside debera alinearse horizontalmente hacia la izquierda*/
+  flex-direction: column; /*el contenido o los elementos dentro del aside tendran una direccion en forma de columna*/
+}
+aside .widget{/*estos son los div llamados widget que estan dentro del aside*/
+  background: white;
+  width: 170px;
+
+  height: 230px; /*la clase widget tendrà una altura de 150 pixeles*/
+  margin:10px; /*La clase widget se separarà de los otros elementos que esten en el aside en una distancia de 10 pixeles*/
+  /*Propiedades Flex*/
+  display: flex; /*la clase widget contiene elementos imagen entonces debe tener un comportamiento flex*/
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+aside .widget img{
+  width: 100%;
+object-fit: fill; /*indicamos que la imagen debe llenar el espacion padre*/
+
+}
+footer{/*Este es el footer o pie da pagina*/
+
+  width: 100%; /*Indicamos que el footer tendra un ancho  igual al 100% del  ancho de su padre, en este caso el contenedor principal*/
+  padding: 10px; /*El contenido del footer se alejarà del borde de este en 10 pixeles*/
+  /*Propiedades Flex*/
+  display: flex; /*El footer es un elemento padre, ya que contiene dentro de si un section y un div, por ello indicamos que su comportamiento es flexible */
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+footer .links{/*La clase links dentro del footer*/
+
+  /*Propiedades Flex*/
+  display: flex; /*La clase links tiene elementos de tipo <a> debemos definirla con un comportamiento flexible*/
+  flex-wrap: wrap; /*Los elementos dentro de la clase links se autoacomodaran para entrar en ella*/
+  flex-direction: row;
+  flex:1;
+
+}
+footer .links a{/*los elementos <a> dentro de la clase "links" del footer*/
+  flex-grow: 1; /*Indicamos que el crecimiento o disminucion de estos elementos será en proporcion 1 respecto de su padre, la clase links*/
+  color:RoyalBlue; /*El color del contenido de las etiquetas, el texto*/
+  padding: 10px; /*el espacio entre el contenido del elemento y su borde*/
+  border: 3px solid RoyalBlue;
+  width: 100px;
+  margin: 20px;
+  text-align: center; /*el alineamiento del texto que le pusimos a la etiqueta */
+  text-decoration: none; /*le sacamos el subrayado al texto*/
+}
+
+
+@media screen and (max-width:800px){ /*indicamos que comportamiento queremos que tenga para un tamaño de pantalla igual o menor a 800px*/
+  .contenedor{
+    flex-direction: column;
+    padding:0;
+  }
+  header{
+    flex-direction: column;
+  }
+  hearder .logo{
+    margin: 20px 0;
+  }
+  hearder nav{
+    width: 100%; /*indicamo que cuando el tamaño sea de 800px o menos el ancho del nav ocupara en un 100% el ancho del padre*/
+  }
+  aside{
+    flex-direction:row;
+    flex:0;
+  }
+  aside .widget{
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 270px){
+  aside{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer{
+    justify-content: space-around;
+  }
+}
