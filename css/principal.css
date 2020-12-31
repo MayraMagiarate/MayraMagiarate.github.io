@@ -85,6 +85,7 @@ header nav a{
   border: 2px solid white;
   border-style: solid;
   border-radius: 20px;
+
   margin: 20px;
   min-width: 100px;
   height: 50px;
@@ -95,6 +96,9 @@ header nav a{
   font-size: 20px;
   text-decoration: none;
   color:white;
+}
+header nav a:hover{
+    box-shadow: 3px 0px 30px  Cyan;
 }
 main{
   width: 100%;
@@ -174,6 +178,9 @@ footer nav a{
   font-size: 20px;
   padding: 2px;
   flex:1;
+}
+footer nav a:hover{
+  box-shadow: 3px 0px 30px  Cyan;
 }
 footer nav img{
   width: 75px;

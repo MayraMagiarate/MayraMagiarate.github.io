@@ -5,7 +5,7 @@ body{
   font-family: 'Roboto', sans-serif;
 /*  background-image: url(../img/imgRegistro.jpg);*/
 background-image: url(../img/imgRegistro.jpg);
-background-size: cover;
+background-size:cover;
 
 }
 
@@ -124,7 +124,7 @@ display:none; /*esto es para que no muestre los mensajes de error antes de que s
   top:15px;
   z-index:100; /*para que el icono este por arriba de otros elementos*/
   font-size: 17px;
-  opacity: 0; /*la opacidad del icono sera sero asi no se ve, hasta que se produzca el error o el acierto*/
+  /*opacity: 0; /*la opacidad del icono sera sero asi no se ve, hasta que se produzca el error o el acierto*/
 }
 .formularios__checkbox{
   margin-right: 15px;
@@ -166,27 +166,46 @@ display:none; /*esto es para que no muestre los mensajes de error antes de que s
   font-weight: bold;
   color: white;
   line-height:50px;
+  cursor: pointer;
+  transition: 0.1s ease all;
 
 }
+
 .formulario__mensaje-exito{
 display: none; /*inactivo hasta que sea un exito la operacion*/
 color: white;
+font-size: 20px;
 text-shadow: 1px 1px 1px red;
 
 
 }
+.formulario__btn:hover{
+  box-shadow: 3px 0px 30px  yellow;
+}
+
+
+/*Estilos para Validación (esto es el icono dentro de los labels), trabajaré con dos colores rojo y verde*/
+.formulario__grupo-correcto .formulario__validacion-estado{
+  color: green;
+  opacity: 0;
+}
+.formulario__grupo-incorrecto .formulario__label{
+  color:red;
+
+}
+.formulario__grupo-incorrecto .formulario__validacion-estado{ /*cambia el aspecto del icono dentro del grupo incorrecto y dentro de la validacion de estado*/
+  color:red;
+  opacity: 1;
+}
+.formulario__grupo-incorrecto .formulario__input{
+  border: 3ps solid red;
+}
 @media ( max-width:700px) {/*de 700px o menos*/
-  .formulario{
-    display:flex;
+    .formulario{
+      display:flex;
     flex-direction: column;
     justify-content: center;
   }
-  body{
-    font-family: 'Roboto', sans-serif;
-  /*  background-image: url(../img/imgRegistro.jpg);*/
-  background-image: url(../img/imgRegistro.jpg);
-  background-size: cover;
 
-  }
 
 }
