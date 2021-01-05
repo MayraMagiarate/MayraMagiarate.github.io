@@ -11,25 +11,52 @@
 
 
 <header>
+  <div class="enlace">
+    <p>BIENVENIDO!</p>
+  </div>
   <div class="logoRegistro">
     <img src="img/smart-house.png" alt="">
   </div>
   <div class="enlace">
-    <a href="finalPrincipal.html">Volver a Pagina Principal</a>
+    <a href="index.html"></a>
   </div>
+
 </header>
 <main>
-<img src="" alt="">
+  <section class="cajaUsuario">
 
-  </form>
+
+<form class="ingreso" action="index.html" method="post">
+  <div class="formulario__grupo " id="grupo__usuario">          <!--contenedor de la primera casilla  -->
+    <label for="usuario" class="formulario__label">Usuario</label>
+    <div class="formulario__grupo-input">
+      <!---->
+      <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Nombre-de-usuario">
+      <!--el id del input debe conicidir con el for="" del label que controlarà -->
+      <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+    </div>
+    <p class="formulario__input-error">El usuario debe estar registrado!</p>
+  </div>
+  <div class="formulario__grupo" id="grupo__password">
+    <!--contenedor de la primera casilla  -->
+    <label for="password" class="formulario__label">Contraseña</label>
+    <div class="formulario__grupo-input">
+      <!---->
+      <input type="password" class="formulario__input" name="password" id="password">
+      <!--el id del input debe conicidir con el for="" del label que controlarà -->
+      <i class="formulario__validacion-estado fas fa-exclamation-triangle"></i>
+    </div>
+    <p class="formulario__input-error">La Contraseña debe ser de 4 a 12 digitos y sólo puede contener letras, numeros y guion bajo!</p>
+  </div>
+</form>
+  </section>
+
 </main>
 <footer>
-  <nav>
-
-    <a href="https://www.instagram.com/aryamdelsolar/?hl=es-la" target="_blank">Contacto</a>
-      <img src="img/logosRedes.jpg" alt="NO hay foto">
-    <a href="https://www.facebook.com/MEG.MF" target="_blank">Facebook</a>
-  </nav>
+<nav class="navegadorFooter">
+  <a href="#">una direccion</a>
+  <a href="#">otra direccion</a>
+</nav>
 </footer>
 </div> <!--FIN CONTENEDOR-->
   </body>
