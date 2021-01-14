@@ -1,6 +1,14 @@
 .container {
     background-image: url(../img/fondoNegro.jpg);
     background-size: cover;
+    min-width: 350px;
+    max-width: 1904px;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 10px;
 }
 
 .iusuario {
@@ -15,9 +23,19 @@
     border-radius: 30px;
 }
 
+.bienvenida {
+    padding: 10px;
+}
+
 .bienvenida h3 {
-    text-align: right;
-    font-size: 17px;
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.volver {
+    padding: 10px;
 }
 
 .volver img:hover {
@@ -28,4 +46,27 @@
 .pie {
     padding: 35px;
     ;
+}
+
+.pie img {
+    padding: 10px;
+}
+
+@media (max-width:620px) {
+    .bienvenida h3 {
+        text-align: right;
+        font-size: 17px;
+    }
+}
+
+@media (min-width:620px)and (max-width:900px) {
+    .bienvenida h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:900px)and (max-width:1400px) {
+    .bienvenida h3 {
+        font-size: 30px;
+    }
 }
