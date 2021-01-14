@@ -1,178 +1,31 @@
-*{
-  box-sizing: border-box;
-margin: 0;
-padding: 0;
+.container {
+    background-image: url(../img/fondoNegro.jpg);
+    background-size: cover;
 }
 
-.contenedor{
-max-width: 1904px;
-/*Establezco que el ancho maximo serà 1904px*/
-min-width: 240px;
-/*Establezco que el ancho minimo para mobile serà de 240px*/
+.iusuario {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 
-min-height: 1000px;
-max-height: 1920px;
-margin: 0;
-padding: 0;
-background-image: url(../img/fondoIngreso.jpg);
-background-size: cover;
+.formulario {
+    margin: 0;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
 
-/*Propiedades flex*/
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+.bienvenida h3 {
+    text-align: right;
+    font-size: 17px;
 }
-header{
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content:center;
-}
-.enlace{
-  display: flex;
-  width: 33%;
-  height: 95%;
-  justify-content: center;
 
+.volver img:hover {
+    box-shadow: 3px 0px 30px rgb(83, 216, 111);
+    border-radius: 20px;
+}
 
-}
-.enlace a{
-  color: white;
-  text-shadow: 10px 10px 10px  Fuchsia;
-  text-decoration: none;
-  justify-content:flex-end;
-  margin-top: 45px;
-  border-radius: 35px;
-  background-image: url(../img/volver-flecha1.png);
-  background-size: contain;
-width: 70px;
-height: 70px;
-
-
-
-}
-.enlace a:hover{
-    box-shadow: 4px 0px 40px Cyan;
-}
-.enlace p{
-  color: white;
-  text-shadow: 10px 10px 10px  Fuchsia;
-  width: 95%;
-  height:95%;
-margin-top: 50px;
-margin-left: 10px;
-
-  font-size: 45px;
-  font-style: normal;
-  font-weight:bolder;
-  font-family: fantasy;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex:1;
-}
-.logoRegistro{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-width: 33%;
-height: 95%;
-
-}
-.logoRegistro img{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100px;
-  height: 100px;
-
-}
-.ingreso{/*El formulario*/
-  width: 100%;
-  height: 98%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.formulario__grupo{
-  width: 95%;
-  height: 150px;
- color:  white;
-
- font-family: Times;
- font-size: 25px;
-
- text-align: center;
- margin: 10px;
- font-weight: bold;
-text-shadow: 10px 10px 10px  Fuchsia;
-
-}
-.formulario__input{
-  margin-top:  10px;
-  margin-bottom: 5px;
-  padding: 5px;
-  width: 85%;
-  height: 50px;
-  border-radius: 20px;
-  border: 2px solid Fuchsia;
-  font-size: 20px;
-}
-main{
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.cajaUsuario{
-  padding: 0;
-  margin: 0;
-  width: 60%;
-  height: 95%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  border: 3px solid white;
-}
-footer{
-  padding: 0;
-  margin: 0;
-width: 100%;
-height: 200px;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-}
-.navegadorFooter{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.navegadorFooter a{
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 20px;
-  text-align: center;
-  color: Fuchsia;
-  font-weight: bolder;
-
+.pie {
+    padding: 35px;
+    ;
 }
