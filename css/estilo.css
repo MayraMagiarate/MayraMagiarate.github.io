@@ -1,0 +1,85 @@
+.container {
+    background-image: url(/img/fondoC.jpg);
+    background-size: cover;
+}
+
+.botones {
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.registro {
+    justify-content: center;
+    border: solid white;
+    border-radius: 20px;
+    margin-left: 75px;
+    margin-bottom: 20px;
+    ;
+}
+
+.registro:hover {
+    box-shadow: 3px 0px 30px blue;
+}
+
+.ingreso {
+    justify-content: center;
+    border: solid white;
+    border-radius: 20px;
+    margin-right: 75px;
+    margin-bottom: 20px;
+    ;
+}
+
+.ingreso:hover {
+    box-shadow: 3px 0px 30px blue;
+}
+
+.registro a {
+    text-decoration: none;
+    font-family: Georgia;
+    font-size: 20px;
+    color: white;
+}
+
+.ingreso a {
+    text-decoration: none;
+    font-family: Georgia;
+    font-size: 20px;
+    color: white;
+}
+
+.titulo1 h1 {
+    text-shadow: 4px 4px 0 rgb(69, 104, 104), 3px 3px 0 hsla(180, 100%, 50%, 1), 2px 2px 0 hsla(180, 100%, 50%, 1), 1px 1px 0 hsla(180, 100%, 50%, 1);
+}
+
+.pie {
+    margin: 20px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-button {
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-button img {
+    margin-right: 20px;
+    margin-left: 41px;
+}
+
+.carro {
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 3px 0px 20px rgb(76, 178, 204);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.laterales {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
