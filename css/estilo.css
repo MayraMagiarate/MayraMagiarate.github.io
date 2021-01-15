@@ -1,8 +1,20 @@
 .container {
     background-image: url(/img/fondoC.jpg);
     background-size: cover;
-    min-width: 576px;
+    min-width: 320px;
     max-width: 1904px;
+}
+
+.logo {
+    padding: 10px;
+    margin: 0;
+}
+
+.titulo {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
 }
 
 .botones {
@@ -17,7 +29,6 @@
     border-radius: 20px;
     margin-left: 75px;
     margin-bottom: 20px;
-    ;
 }
 
 .registro:hover {
@@ -30,7 +41,6 @@
     border-radius: 20px;
     margin-right: 75px;
     margin-bottom: 20px;
-    ;
 }
 
 .ingreso:hover {
@@ -84,4 +94,34 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    wid
+}
+
+@media (max-width:576px) {
+    .registro {
+        justify-content: center;
+        border: solid white;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    .ingreso {
+        justify-content: center;
+        border: solid white;
+        border-radius: 20px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    .registro a {
+        text-decoration: none;
+        font-family: Georgia;
+        font-size: 15px;
+        color: white;
+    }
+    .ingreso a {
+        text-decoration: none;
+        font-family: Georgia;
+        font-size: 15px;
+        color: white;
+    }
 }
