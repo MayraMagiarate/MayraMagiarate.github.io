@@ -1,6 +1,8 @@
 .container {
     background-image: url(/img/fondoC.jpg);
     background-size: cover;
+    min-width: 576px;
+    max-width: 1904px;
 }
 
 .botones {
@@ -61,13 +63,13 @@
 }
 
 .accordion-button {
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 5px;
 }
 
 .accordion-button img {
-    margin-right: 20px;
-    margin-left: 41px;
+    margin-right: 10px;
+    margin-left: 25px;
 }
 
 .carro {
